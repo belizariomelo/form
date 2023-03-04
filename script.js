@@ -8,13 +8,16 @@ function enviarEmail() {
     "mailto:belizarioclementino@hotmail.com" +
     "?subject=Novo Formulário Enviado" +
     "&body=Nome: " +
+      
     nome +
     "%0D%0A" +
     "Número: " +
     numero +
+      
     "%0D%0A" +
     "E-mail: " +
     email +
+      
     "%0D%0A" +
     "Horário: " +
     horario;
