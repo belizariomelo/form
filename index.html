@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="botao.css" />
+    <title>formulario</title>
+    <link rel="icon" href="cadastro.png" type="image/png" />
+  </head>
+  <body>
+    <section class="formulario1">
+      <label>
+        <input class="toggle-checkbox" type="checkbox" />
+        <div class="toggle-slot">
+          <div class="sun-icon-wrapper">
+            <div
+              class="iconify sun-icon"
+              data-icon="feather-sun"
+              data-inline="false"
+            ></div>
+          </div>
+          <div class="toggle-button"></div>
+          <div class="moon-icon-wrapper">
+            <div
+              class="iconify moon-icon"
+              data-icon="feather-moon"
+              data-inline="false"
+            ></div>
+          </div>
+        </div>
+      </label>
+      <h1>Palco SECTI</h1>
+      <form action="#" method="POST" onsubmit="return enviarEmail();">
+        <label for="nome"></label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          required
+          maxlength="60"
+          placeholder="Nome"
+        />
+        <br />
+        <label for="numero"></label>
+        <input
+          type="tel"
+          id="numero"
+          name="numero"
+          placeholder="(DD) 9XXXX-XXXX"
+          required
+          pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+          maxlength="16"
+        />
+        <br />
+        <label for="email"></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="E-mail"
+        />
+
+        <br /><br />
+        <label for="horario">Horário:</label>
+        <select id="horario" name="horario" required>
+          <option value="">Selecione uma opção</option>
+          <option value="manhã">Manhã</option>
+          <option value="tarde">Tarde</option>
+          <option value="noite">Noite</option>
+        </select>
+
+        <input class="btn-enviar" type="submit" value="Enviar" />
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
