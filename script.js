@@ -1,4 +1,6 @@
-function enviarEmail() {
+function enviarEmail(event) {
+  event.preventDefault();
+
   var nome = document.getElementById("nome").value;
   var numero = document.getElementById("numero").value;
   var email = document.getElementById("email").value;
@@ -6,22 +8,24 @@ function enviarEmail() {
 
   var link =
     "mailto:belizarioclementino@hotmail.com" +
-    "?subject=Novo Formulário Enviado" +
-    "&body=Nome: " +
+    "?subject=Reserva Palco SECTI" +
+    "&body=Nome:  " +
     nome +
-    "%0D%0A" +
-    "Número: " +
+    "%0D%0A %0D%0A" +
+    "Número:  " +
     numero +
-    "%0D%0A" +
-    "E-mail: " +
+    "%0D%0A %0D%0A" +
+    "E-mail:   " +
     email +
-    "%0D%0A" +
-    "Horário: " +
+    "%0D%0A %0D%0A" +
+    "Horário:  " +
     horario;
 
   window.location.href = link;
+  location.reload();
   return true;
 }
+
 const numeroInput = document.getElementById("numero");
 
 numeroInput.addEventListener("input", function () {
@@ -111,6 +115,16 @@ numeroInput.addEventListener("input", function () {
     }
 
     numeroInput.value = numeroComMascara;
+  }
+});
+
+// Adicione o evento "keydown" no input do número
+numeroInput.addEventListener("keydown", function (event) {
+  // Verifique se a tecla pressionada é o "backspace" ou "delete"
+  if (event.key === "Backspace" || event.key === "Delete") {
+    // Remova o último caractere do valor do input
+    const novoNumero = numeroInput.value.slice(0, -1);
+    numeroInput.value = novoNumero;
   }
 });
 const inputs = document.querySelectorAll(
