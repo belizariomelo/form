@@ -6,24 +6,49 @@ function enviarEmail(event) {
   var email = document.getElementById("email").value;
   var horario = document.getElementById("horario").value;
 
-  var link =
-    "mailto:belizarioclementino@hotmail.com" +
-    "?subject=Reserva Palco SECTI" +
-    "&body=Nome:  " +
-    nome +
-    "%0D%0A %0D%0A" +
-    "Número:  " +
-    numero +
-    "%0D%0A %0D%0A" +
-    "E-mail:   " +
-    email +
-    "%0D%0A %0D%0A" +
-    "Horário:  " +
-    horario;
+  var isValid = true; // adiciona uma variável para verificar se todos os campos são válidos
 
-  window.location.href = link;
-  location.reload();
-  return true;
+  if (nome === "") {
+    isValid = false;
+    alert("Por favor, preencha o nome.");
+  }
+
+  if (numero === "" || numero.length < 14) {
+    isValid = false;
+    alert("Por favor, preencha o número de telefone corretamente.");
+  }
+
+  if (email === "" || !email.includes("@")) {
+    isValid = false;
+    alert("Por favor, preencha o email corretamente.");
+  }
+
+  if (horario === "") {
+    isValid = false;
+    alert("Por favor, selecione um horário.");
+  }
+
+  if (isValid) {
+    // recarrega a página apenas se todos os campos forem válidos
+    var link =
+      "mailto:belizarioclementino@hotmail.com" +
+      "?subject=Reserva Palco SECTI" +
+      "&body=Nome:  " +
+      nome +
+      "%0D%0A %0D%0A" +
+      "Número:  " +
+      numero +
+      "%0D%0A %0D%0A" +
+      "E-mail:   " +
+      email +
+      "%0D%0A %0D%0A" +
+      "Horário:  " +
+      horario;
+
+    window.location.href = link;
+    location.reload();
+    return true;
+  }
 }
 
 const numeroInput = document.getElementById("numero");
