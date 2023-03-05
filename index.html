@@ -32,7 +32,7 @@
         </div>
       </label>
       <h1>Palco SECTI</h1>
-      <form action="#" method="POST" onsubmit="return enviarEmail();">
+      <form action="#" method="POST" onsubmit="return enviarEmail(event);">
         <label for="nome"></label>
         <input
           type="text"
@@ -72,7 +72,12 @@
           <option value="noite">Noite</option>
         </select>
 
-        <input class="btn-enviar" type="submit" value="Enviar" />
+        <input
+          class="btn-enviar"
+          type="submit"
+          value="Enviar"
+          onclick="location.reload();"
+        />
       </form>
     </section>
 
