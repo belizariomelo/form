@@ -1,3 +1,5 @@
+
+
 function enviarEmail(event) {
   event.preventDefault();
 
@@ -55,6 +57,7 @@ const numeroInput = document.getElementById("numero");
 
 numeroInput.addEventListener("input", function () {
   const numero = numeroInput.value;
+
 
   const dddsValidos = [
     "11",
@@ -134,24 +137,22 @@ numeroInput.addEventListener("input", function () {
     if (numeroSemMascara.length === 11) {
       numeroComMascara +=
         numeroSemMascara.substring(2, 7) + "-" + numeroSemMascara.substring(7);
-    } else {
+    } else if (numeroSemMascara.length === 10) {
       numeroComMascara +=
         numeroSemMascara.substring(2, 6) + "-" + numeroSemMascara.substring(6);
+    } else {
+      numeroComMascara += numeroSemMascara.substring(2);
     }
 
     numeroInput.value = numeroComMascara;
+  } else {
+    // Remove o sinal "-" se ele foi adicionado anteriormente
+    numeroInput.value = numeroInput.value.replace("-", "");
   }
 });
 
-// Adicione o evento "keydown" no input do número
-numeroInput.addEventListener("keydown", function (event) {
-  // Verifique se a tecla pressionada é o "backspace" ou "delete"
-  if (event.key === "Backspace" || event.key === "Delete") {
-    // Remova o último caractere do valor do input
-    const novoNumero = numeroInput.value.slice(0, -1);
-    numeroInput.value = novoNumero;
-  }
-});
+
+
 const inputs = document.querySelectorAll(
   'input[type="text"], input[type="tel"], input[type="email"], select'
 );
