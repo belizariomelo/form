@@ -1,32 +1,5 @@
 
 
-if (window.SpeechRecognition) {
-  const recognition = new window.SpeechRecognition();
-  recognition.lang = 'pt-BR';
-  recognition.continuous = true;
-  recognition.interimResults = true;
-
-  recognition.onresult = (event) => {
-    const transcript = event.results[event.results.length - 1][0].transcript;
-    console.log(transcript);
-  }
-
-  recognition.onerror = (event) => {
-    console.error(event.error);
-  }
-
-  const button = document.querySelector('button');
-  button.addEventListener('click', () => {
-    recognition.start();
-  });
-}
-
-const toggleButton = document.querySelector('.toggle-button');
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-});
-
-
 function enviarEmail(event) {
   event.preventDefault();
 
