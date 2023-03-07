@@ -14,7 +14,7 @@ function enviarEmail(event) {
   var nome = document.getElementById("nome").value;
   var numero = document.getElementById("numero").value;
   var email = document.getElementById("email").value;
-  var msg = document.getElementById("msg").value;
+  var horario = document.getElementById("horario").value;
 
   var isValid = true; // adiciona uma variável para verificar se todos os campos são válidos
 
@@ -35,16 +35,14 @@ function enviarEmail(event) {
       "%0D%0A %0D%0A" +
       "Horário:  " +
       horario +
-      "%0D%0A %0D%0A"
-      "Motivo:   "+
-      msg,
+      "%0D%0A %0D%0A" +
+      "Motivo: " +
+      document.getElementById('msg').value;
 
     window.location.href = link;
-    location.reload();
     return true;
-  }
 }
-
+}
 const numeroInput = document.getElementById("numero");
 
 numeroInput.addEventListener("input", function () {
