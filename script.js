@@ -14,7 +14,7 @@ function enviarEmail(event) {
   var nome = document.getElementById("nome").value;
   var numero = document.getElementById("numero").value;
   var email = document.getElementById("email").value;
-  var horario = document.getElementById("horario").value;
+  var msg = document.getElementById("msg").value;
 
   var isValid = true; // adiciona uma variável para verificar se todos os campos são válidos
 
