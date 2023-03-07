@@ -36,7 +36,7 @@ function enviarEmail(event) {
       "Horário:  " +
       horario +
       "%0D%0A %0D%0A" +
-      "Motivo: " +
+      "Motivo da Reserva: " +
       document.getElementById('msg').value;
 
     window.location.href = link;
