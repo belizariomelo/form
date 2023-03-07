@@ -2,6 +2,8 @@
 
 
 
+
+
 const toggleButton = document.querySelector('.toggle-button');
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark');
@@ -188,3 +190,33 @@ toggleSwitch.addEventListener("change", function (event) {
   }
 });
 
+const likeCheckbox = document.getElementById('like-checkbox');
+const likeCount = document.getElementById('like-count');
+
+let likeCounter = 0;
+let ip = null;
+
+// Get user IP address
+fetch('https://api.ipify.org/?format=json')
+  .then(response => response.json())
+  .then(data => ip = data.ip);
+
+likeCheckbox.addEventListener('change', () => {
+  if (likeCheckbox.checked && ip) {
+    // Check if user has not liked yet
+    if (!localStorage.getItem(ip)) {
+      // Add like to counter and set localStorage
+      likeCounter++;
+      localStorage.setItem(ip, true);
+      likeCount.textContent = likeCounter;
+    }
+  } else if (!likeCheckbox.checked && ip) {
+    // Check if user has liked before
+    if (localStorage.getItem(ip)) {
+      // Subtract like from counter and remove localStorage
+      likeCounter--;
+      localStorage.removeItem(ip);
+      likeCount.textContent = likeCounter;
+    }
+  }
+});
