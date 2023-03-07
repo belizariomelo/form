@@ -1,5 +1,7 @@
 
 
+
+
 const toggleButton = document.querySelector('.toggle-button');
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark');
@@ -16,27 +18,7 @@ function enviarEmail(event) {
 
   var isValid = true; // adiciona uma variável para verificar se todos os campos são válidos
 
-  if (nome === "") {
-    isValid = false;
-    alert("Por favor, preencha o nome.");
-  }
-
-  if (numero === "" || numero.length < 14) {
-    isValid = false;
-    alert("Por favor, preencha o número de telefone corretamente.");
-  }
-
-  if (email === "" || !email.includes("@")) {
-    isValid = false;
-    alert("Por favor, preencha o email corretamente.");
-  }
-
-  if (horario === "") {
-    isValid = false;
-    alert("Por favor, selecione um horário.");
-  }
-  
-
+ 
   if (isValid) {
     // recarrega a página apenas se todos os campos forem válidos
     var link =
@@ -52,8 +34,10 @@ function enviarEmail(event) {
       email +
       "%0D%0A %0D%0A" +
       "Horário:  " +
-      horario
-
+      horario +
+      "%0D%0A %0D%0A"
+      "Motivo:   "+
+      msg,
 
     window.location.href = link;
     location.reload();
