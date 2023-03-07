@@ -33,8 +33,8 @@ textarea::placeholder{
 }
 hr{
     padding: 0.1.7px;
-    margin-top: 5%;
-    margin-bottom: -3%;
+    margin-top: 3%;
+    margin-bottom: -2%;
 }
 textarea:focus::placeholder {
     font-size: 0px;
@@ -45,3 +45,4 @@ textarea:focus::placeholder {
     flex-direction: column;
   }
   
+ 
