@@ -44,12 +44,6 @@ h1 {
   text-align: center;
 }
 
-label {
-  display: block;
-  font-size: 19px;
-  color: rgb(25, 25, 25);
-  margin-bottom: 10px;
-}
 
 input[type="text"],
 input[type="tel"],
@@ -92,12 +86,11 @@ select.input-focus::-webkit-input-placeholder option:first-child {
 }
 /* Estilo para o tema padrão */
 h1 {
-  color: rgb(48, 47, 47);
+  color: rgb(110, 107, 100);
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-label {
-  color: black;
-}
 
 .btn-enviar {
   background-color: blue;
@@ -107,6 +100,7 @@ label {
 /* Estilo para o tema escuro */
 .dark-mode h1 {
   color: white;
+  text-shadow: 2px 2px 4px rgba(159, 157, 157, 0.3);
 }
 
 .dark-mode input[type="text"]:focus,
