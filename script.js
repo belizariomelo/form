@@ -189,34 +189,3 @@ toggleSwitch.addEventListener("change", function (event) {
     localStorage.setItem("theme", "default");
   }
 });
-
-const likeCheckbox = document.getElementById('like-checkbox');
-const likeCount = document.getElementById('like-count');
-
-let likeCounter = 0;
-let ip = null;
-
-// Get user IP address
-fetch('https://api.ipify.org/?format=json')
-  .then(response => response.json())
-  .then(data => ip = data.ip);
-
-likeCheckbox.addEventListener('change', () => {
-  if (likeCheckbox.checked && ip) {
-    // Check if user has not liked yet
-    if (!localStorage.getItem(ip)) {
-      // Add like to counter and set localStorage
-      likeCounter++;
-      localStorage.setItem(ip, true);
-      likeCount.textContent = likeCounter;
-    }
-  } else if (!likeCheckbox.checked && ip) {
-    // Check if user has liked before
-    if (localStorage.getItem(ip)) {
-      // Subtract like from counter and remove localStorage
-      likeCounter--;
-      localStorage.removeItem(ip);
-      likeCount.textContent = likeCounter;
-    }
-  }
-});
