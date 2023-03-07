@@ -1,0 +1,47 @@
+
+textarea {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 8px 30px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    resize: none;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 4%;
+    outline: none;
+    
+  
+  }
+  .dark-mode textarea:focus{
+    box-shadow: 0px 0px 4px rgb(255, 255, 255);
+    transition:  0.6s ease;
+  }
+  textarea:focus{
+    box-shadow: 0px 0px 7px rgb(197, 151, 151);
+    transition: 0.6s ease;
+  }
+  
+.dark-mode .formPricipal{
+    background-color: #161b22;
+}
+textarea::placeholder{
+  font-weight:lighter;
+  color: #565454;
+  font-style: italic;
+  font-size: large;
+}
+hr{
+    padding: 0.1.7px;
+    margin-top: 5%;
+    margin-bottom: -3%;
+}
+textarea:focus::placeholder {
+    font-size: 0px;
+    transition: font-size 0.3s ease-out;
+  }
+  .horarioTexto{
+    display: flex;
+    flex-direction: column;
+  }
+  
