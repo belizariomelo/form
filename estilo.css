@@ -173,7 +173,7 @@ select option:first-child {
     padding: 30px;
   }
   .formulario1{
-   width: auto;
+  width: max-content;
     margin: 2% 4%;
   }
   html {
