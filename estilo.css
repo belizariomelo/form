@@ -173,8 +173,8 @@ select option:first-child {
     padding: 30px;
   }
   .formulario1{
-   width: 200%;
-    margin: 2% 4%;
+   width: 100%;
+    margin: 2% ;
   }
   html {
     margin: auto 0;
