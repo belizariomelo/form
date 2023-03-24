@@ -178,7 +178,7 @@ select option:first-child {
   }
   
   .formulario1 {
-    width: 100%;
+    width: auto;
     display: table-cell;
     vertical-align: middle;
     margin: 2%;
