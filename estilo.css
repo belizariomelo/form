@@ -169,22 +169,15 @@ select option:first-child {
 /* Responsividade */
 @media (max-width: 768px) {
   section {
+    margin: 10px;
     padding: 30px;
   }
-  body {
-    margin-top: 5%;
-    display: table;
-    width: 100%;
-  }
-  
-  .formulario1 {
-    width: auto;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 2%;
+  .formulario1{
+   width: auto;
+    margin: 2% 4%;
   }
   html {
-    height: 100%;
+    margin: auto 0;
   }
   h1 {
     font-size: 24px;
@@ -196,4 +189,5 @@ select option:first-child {
     padding: 10px 20px;
   }
 }
+
 
