@@ -1,0 +1,191 @@
+/* Fontes */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+/* Cores */
+:root {
+  --cor-principal: #4e4e4e;
+  --cor-secundaria: #ffac2f;
+  --cor-fundo: #f2f2f2;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.dark-mode {
+  background-image: radial-gradient(circle at 50% 50%, #24272b 0, #161c22 50%, #181d22  100%);
+
+}
+.dark-mod {
+  border: 1px solid rgb(18, 17, 23);
+  background-image: radial-gradient(circle at 90.87% 90.25%, #141b22 16.67%, #141b22 33.33%, #151b22 50%, #161b22 66.67%, #202835 83.33%, #171a22 100%);background-image: linear-gradient(195deg, #121c21 0, #121c21 12.5%, #131b22 25%, #141b22 37.5%, #151b22 50%, #161b22 62.5%, #171a22 75%, #181a22 87.5%, #191a22 100%);
+}
+/* Formulário */
+body {
+  background-image: radial-gradient(circle at 50% 50%, #f6f4e9 0, #edecdb 50%, #e3e4cd 100%);
+}
+.formulario1{
+  margin-top: 5%;
+}
+section {
+  margin: 50px auto;
+  max-width: 500px;
+  background-image: radial-gradient(circle at 111.87% 50%, #f0ebda 0, #efebda 16.67%);
+  box-shadow: inset -1.5px -1.5px  6px rgba(16, 14, 24, 0.84);
+ 
+  padding: 40px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+  border: none;
+  border-radius: 5px;
+  padding: 12px 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: var(--cor-fundo);
+  color: var(--cor-principal);
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 8px 30px rgba(0, 0, 0, 0.1);
+}
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder,
+select option:first-child {
+  color: #212020;
+  font-style: italic;
+  font-size: large;
+}
+input[type="text"].input-focus::placeholder,
+input[type="tel"].input-focus::placeholder,
+input[type="email"].input-focus::placeholder {
+  transition: all 0.3s ease-out;
+  transform: translate(-5px);
+  font-size: 0px;
+}
+
+input[type="text"].input-focus::-webkit-input-placeholder,
+input[type="tel"].input-focus::-webkit-input-placeholder,
+input[type="email"].input-focus::-webkit-input-placeholder,
+select.input-focus::-webkit-input-placeholder option:first-child {
+  transition: all 0.3s ease-out;
+  transform: translate(-120px);
+  font-size: 0px;
+}
+/* Estilo para o tema padrão */
+h1 {
+  color: rgb(110, 107, 100);
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+.btn-enviar {
+  background-color: blue;
+  color: white;
+}
+
+/* Estilo para o tema escuro */
+.dark-mode h1 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(159, 157, 157, 0.3);
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode input[type="tel"]:focus,
+.dark-mode input[type="email"]:focus,
+.dark-mode select:focus {
+  outline: none;
+  box-shadow: 0px 0px 6px rgb(255, 255, 255);
+}
+
+.dark-mode label {
+  color: white;
+}
+
+.dark-mode .btn-enviar {
+  background-image: radial-gradient(circle at 120.71% 50%, #e72806 0, #e70f0f 50%, #e70016 100%);
+  
+  color: white;
+}
+.dark-mode .btn-enviar:hover {
+  background-image: radial-gradient(circle at 120.71% 50%,  #8d0f0f 50%, #8f0916 100%);
+  
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 7px rgb(178, 149, 149);
+}
+select option:first-child {
+  color: #515151;
+  font-style: italic;
+}
+.btn-enviar {
+  background-color: var(--cor-secundaria);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+.btn-enviar:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+@media (max-width: 767px) {
+  .btn-enviar {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  section {
+    margin: 10px;
+    padding: 30px;
+  }
+  .formulario1{
+   
+    margin: 2% 4%;
+  }
+  html {
+    margin: auto 0;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  input[type="submit"] {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
